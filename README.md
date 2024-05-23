@@ -34,6 +34,30 @@ This repository contains a Flask-based Todo API, allowing users to manage tasks 
    ```
    python -m unittest tests.test_task_routes
    ```
+**Database Setup:**
+
+This Todo API is designed to work with MySQL database. To set up the database and perform migrations, follow these steps:
+
+1. **Database Configuration:**
+   Ensure that you have MySQL installed and running on your system. Update the database connection settings in the `config/config.py` file located in the root directory to match your MySQL configuration.
+
+2. **Database Migration:**
+   Use Flask-Migrate to manage database migrations. To create an initial migration, execute the following command in the terminal:
+   ```
+   flask db init
+   ```
+
+3. **Perform Migrations:**
+   Whenever there are changes to the database models, create a migration script using the following command:
+   ```
+   flask db migrate -m "your_migration_message"
+   ```
+
+4. **Apply Migrations:**
+   Apply the migration to the database by running:
+   ```
+   flask db upgrade
+   ```
 
 **Description:**
 
